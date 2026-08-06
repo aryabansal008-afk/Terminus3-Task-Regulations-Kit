@@ -1,0 +1,37 @@
+# Terminus 3 task.toml template
+# Fill in every field below. Do not leave placeholders in a real submission.
+# See REGULATIONS.md §5 and NOTES_ON_CONFLICTS.md item 1 (timeout ambiguity).
+
+name = ""                          # task name
+category = ""                      # exactly one, from official taxonomy
+subcategory = ""                   # exactly one, from official taxonomy
+tags = []                          # 3-6 tags
+languages = []                     # languages used in the task
+difficulty = ""                    # "frontier" | "advanced" | "core" | "base"
+expert_time_estimate_hours = 0.0
+
+author_name = ""
+author_email = ""
+
+artifacts = []                     # expected output artifact paths (absolute)
+
+difficulty_explanation = ""        # why this tier — reference expected pass rate band
+solution_explanation = ""          # what the oracle solution does
+verification_explanation = ""      # how the verifier confirms correctness
+relevant_experience = ""           # author's relevant background for this domain
+
+[agent]
+# Minimum 1800s is supported by 2 of 3 source docs (Doc 2, Doc 4) — treat
+# this as reasonably reliable. The "typical" value is still unresolved:
+# Doc 1 says ~7200s, Doc 4 says 60-90 min (3600-5400s). Confirm typical
+# value against the live spec; the >=1800s floor is fine to rely on.
+timeout_sec = 1800                 # minimum per spec — raise for tasks needing more of the 60-90min typical range
+
+[verifier]
+timeout_sec = 1800                 # placeholder — Doc 1 implies >=1800 here; Doc 2 doesn't state a minimum
+environment_mode = "separate"      # required
+
+[environment]
+build_timeout_sec = 600            # placeholder — set appropriately for this task's build
+network_mode = "public"            # use "offline"/equivalent only if task specifically requires it
+# Resource envelope target: ~2 CPU cores, 8GB RAM, 10GB storage, no GPU dependency

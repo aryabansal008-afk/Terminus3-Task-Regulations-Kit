@@ -1,0 +1,15 @@
+solution/
+tests/
+rubrics.txt
+README.md
+.git/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.log
+*.pyc
+.env
+*.pem
+*.key
+credentials*
