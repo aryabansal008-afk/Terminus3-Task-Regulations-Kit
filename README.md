@@ -1,9 +1,5 @@
 # Terminus 3 Task Regulations Kit
 
-A consolidated reference + starter scaffold for authoring a Terminus 3 task
-that satisfies the requirements described in the two review prompts you
-provided ("Task Improvement Prompt" and "Compliance & Quality Review Prompt").
-
 This kit does **not** contain a finished task — no actual task materials
 (instruction.md content, oracle logic, verifier tests) were provided, so
 nothing here fabricates task-specific content. It gives you:
