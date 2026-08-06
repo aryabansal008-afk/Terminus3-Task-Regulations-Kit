@@ -61,23 +61,3 @@ nothing here fabricates task-specific content. It gives you:
    reviewer may not have stated explicitly, and
    `common_rejection_reasons.md` to scan for issues proactively.
 
-## Extending this kit
-
-This kit is meant to absorb new source prompts/specs over time without
-duplicating what's already here:
-
-- A new prompt that **refines an existing section** → update that section
-  in `REGULATIONS.md` and the matching `checklists/NN_*.md` file in place;
-  note the change and its source in `CHANGELOG.md`. Don't fork a parallel
-  copy of a section that already exists.
-- A new prompt that **adds a genuinely new review layer** (like Docs 3, 5,
-  6 did) → give it its own top-level folder plus a matching `checklists/`
-  entry, cross-referenced from `REGULATIONS.md`, exactly as the existing
-  folders do.
-- A new prompt that **conflicts** with an existing rule → do not silently
-  overwrite; add an entry to `NOTES_ON_CONFLICTS.md` recording both
-  versions and which one the kit currently treats as canonical, plus why.
-- Any new objectively-checkable rule (a required field, a syntax
-  constraint, a forbidden pattern) → add a corresponding check to
-  `tools/validate_task.py` rather than leaving it as a manual-only
-  checklist item, so future tasks benefit automatically.
